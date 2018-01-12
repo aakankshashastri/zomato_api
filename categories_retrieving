@@ -1,0 +1,14 @@
+from bs4 import BeautifulSoup
+import json
+import urllib.request
+import requests
+
+key = 'de71e4e9d7fdfe43b12cb16bb71aad63'
+url = "https://developers.zomato.com/api/v2.1/categories"
+
+r = urllib.request.Request(url, headers={"user-key": key})
+json_obj = urllib.request.urlopen(r)
+data = json.load(json_obj)
+
+#soup = BeautifulSoup(data)
+print(data)
