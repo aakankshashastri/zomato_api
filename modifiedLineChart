@@ -1,0 +1,14 @@
+import matplotlib.pyplot as plt
+import pandas as pd
+def plotLineChart(x,y):
+    plt.plot(x,y)
+    return
+dataset = pd.read_csv('https://raw.githubusercontent.com/plotly/datasets/master/2014_apple_stock.csv')
+aapl_x = dataset['AAPL_x']
+aapl_y = dataset['AAPL_y']
+plotLineChart(aapl_x,aapl_y)
+plt.xlabel('AAPL_x')
+plt.ylabel('AAPL_y')
+plt.title('Apple Stock')
+plt.legend()
+plt.show()
